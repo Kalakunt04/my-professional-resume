@@ -11,15 +11,15 @@ jobs:
             - name: Clone the code
               uses: actions/checkout@v4
             - name: Build image
-              run:
+              run:  
                 docker build -t kalakunt04/cicd-portfolio .
             - name: Docker login
               uses: docker/login-action@v3
-              with:
-                username: kalakunt04
-                paswword: ${{ secrets.DOCKER_PASS }}
+              with: 
+                username: kalakunt04 
+                password: ${{ secrets.DOCKER_PASS }}
             - name: Push image
-              run:
+              run: 
                 docker push kalakunt04/cicd-portfolio
 
 
