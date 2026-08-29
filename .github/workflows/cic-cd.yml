@@ -43,6 +43,9 @@ jobs:
               id: login-ecr
               uses: aws-actions/amazon-ecr-login@v2    
 
+            - name: Push Image to ECR
+              run: docker push 011540938308.dkr.ecr.us-east-1.amazonaws.com/my-repo:latest
+                      
 
 
                 
